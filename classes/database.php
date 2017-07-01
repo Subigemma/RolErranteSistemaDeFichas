@@ -42,6 +42,10 @@ class Database
    {
       echo "<pre>" . $this->describeError() . "\n " . $MyStr . "</pre>";
    }
+   function showErrorDie ($MyStr)
+   {
+      return "<pre>" . $this->describeError() . "\n " . $MyStr . "</pre>";
+   }
 
    function doQuery($sqlQuery) 
    {

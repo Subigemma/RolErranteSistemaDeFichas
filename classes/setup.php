@@ -2,8 +2,12 @@
     /*
 	** TODO: Check usuario
 	*/
-	$RE_UserForo="Nuvalia";
-	$RE_UserWow="Nuvalia";
+	if (!isset($_COOKIE['ips4_member_id']) or !isset($_COOKIE['ips4_pass_hash']))
+	{
+		die ("<html>\n<body>\n<a href='http://www.rolerrante.com'>Debes identificarte en el foro de Rol Errante.</a>\n</body>\n</html>");
+	}
+	$RE_UserForo=$_COOKIE['ips4_member_id'];
+	//$RE_UserWow="Nuvalia";
 	/******/
 	define ("MAX_ATTR", 26);
     define ("MAX_HABI", 26);
